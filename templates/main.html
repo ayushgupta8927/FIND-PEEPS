@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Face-Detection</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loading.css') }}" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+	<style type="text/css">
+		html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+	</style>
+</head>
+
+<body>
+	<div class="page">
+		<div class="container" align='center'>
+			<span>
+				<h1 class="heading"><img class="icon" src="{{ url_for('static', filename='icon.png') }}" alt="" width=80
+						height=80 style="margin-right:10px;" />Face
+					Recognition</h1>
+			</span>
+			<hr>
+		</div>
+		
+		
+		
+		<div align='center'>
+			<form action="/upload" method="POST" enctype="multipart/form-data">
+				<div>
+					<label>
+						<p class="select_format">Choose a Photo</p>
+						<input type='file' required accept="image/png, image/jpeg, image/jpg" name='mySrc' hidden
+							onchange="upload()" />
+					</label>
+				</div>
+				<div>
+					<label>
+						<span class="dimension">Dimensions</span>
+						<input class="number_format" type='number' value={{theWidth}} placeholder="Width" name='myWidth' />
+						<input class="number_format" type='number' value={{theHeight}} placeholder="Height" name='myHeight' />
+					</label>
+				</div>
+				<div>
+					<input class="button_format" type='submit' value='UPLOAD' id='btn1' />
+				</div>
+			</form>
+		</div>
+		<footer class="page-footer font-small teal pt-4">
+		
+			<!-- Footer Text -->
+			<div class="container-fluid text-center text-md-left">
+		
+				<!-- Grid row -->
+				<div class="row">
+		
+					<!-- Grid column -->
+					<div class="col-md-6 mt-md-0 mt-3">
+		
+						<!-- Content -->
+						<h5 class="text-uppercase font-weight-bold">A Flask Web-App for Face Detection </h5>
+						<p>This Flask Web App functions as a fully-equipped Face-Detection software, with accurate Face and
+							Feature Detection Mechanisms.
+							The MTCNN Classifier has been utilised for the task of Face Detection. This has been paired with the
+							capabilities of Python and Flask,
+							inorder to achieve the highest possible efficiency and ease of use. The detected faces can be
+							downloaded as a zip-file onto the client's device, for further reference and perusal.
+		
+						</p>
+		
+					</div>
+					<!-- Grid column -->
+		
+					<hr class="clearfix w-100 d-md-none pb-3">
+		
+					<!-- Grid column -->
+					<div class="col-md-6 mb-md-0 mb-3">
+		
+						<!-- Content -->
+						<h5 class="text-uppercase font-weight-bold">Developer's Note:</h5>
+						<p>This web App has been developed by <span style="color: black; font-weight: bolder;">Abhirup Deb</span> and <span style="color: black; font-weight: bolder;">Ayush Gupta</span>, 3rd Year Students of Computer Science and
+							Engineering Department, Cooch Behar Government Engineering College.</p>
+		
+					</div>
+					<!-- Grid column -->
+		
+				</div>
+				<!-- Grid row -->
+		
+			</div>
+			<!-- Footer Text -->
+		
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2021 Copyright:
+				<a href="https://github.com/abhirupdeb/"> Abhirup_Deb</a>
+			</div>
+			<!-- Copyright -->
+		
+		</footer>
+	</div>
+	<div class="page-loader" style="display: none;">
+		<div class="loader"></div>
+	</div>
+	
+
+</body>
+
+<script type="text/javascript">
+	page = document.querySelector(".page");
+	pageLoader = document.querySelector(".page-loader");
+	pageLoader.style.display = "none";
+	function upload() {
+		document.querySelector(".select_format").innerHTML = "Photo Selected";
+	}
+
+	button = document.querySelector(".button_format");
+	button.addEventListener("click", function () {
+		pageLoader.style.display = "";
+		page.style.display = "none";
+	})
+
+</script>
+</html>

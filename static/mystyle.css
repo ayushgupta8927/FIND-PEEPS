@@ -1,0 +1,192 @@
+.page {  /* IE and Edge */
+  
+  width: 100vw;
+  height: fit-content;
+  overflow: hidden;
+  background: linear-gradient(to left, cyan, magenta);
+  font-family: "Poiret One", cursive;
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  font-family: "Poiret One", cursive;
+  letter-spacing: 7px;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 80px;
+  color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.button_format {
+  border-radius: 300px;
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43606,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(241, 238, 13, 0.719);
+  margin-bottom: 20px;
+  margin-left: 0px;
+  font-size: 18px;
+  width: 300px;
+  font-weight: bold;
+  padding: 20px;
+  border: none;
+  background-size: 300% 100%;
+  transition: all 0.4s ease-in-out;
+}
+.button_format:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+.button-format:focus {
+  outline: none;
+}
+.number_format {
+  font-family: cursive;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-right: 0px;
+  font-size: 14px;
+  width: 100px;
+  color: #005050;
+}
+.my_padding {
+  margin-top: 10px;
+}
+hr {
+  background-image: linear-gradient(to right, blue, cyan, white);
+  height: 5px;
+  border-radius: 15px;
+}
+
+.dimension {
+  padding: 15px;
+  font-family: monospace;
+  font-size: 16px;
+  margin: 15px;
+  width: 150px;
+  border-radius: 100px;
+  color: white;
+}
+.select_format {
+  margin-top: 30px;
+  width: 250px;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 20px;
+  color: white;
+  background: rgba(26, 23, 43, 0.333);
+  border-radius: 300px;
+  box-shadow: inset 0 0 0 0 #f42069;
+  transition: ease-in-out 0.4s;
+}
+.select_format:hover {
+  box-shadow: inset 250px 0 0 0 #f42069;
+  cursor: pointer;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+.flex-container-col {
+
+  border-top: 2px solid white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 107px);
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 17px;
+  padding-top: 8px;
+  /* justify-content: space-around; */
+}
+.res-img {
+  padding: 7px 5px 20px 5px;
+
+}
+.group-body{
+  border-top: 2px solid white;
+  padding: 10px;
+  margin: auto;
+}
+.Download{
+  position: relative;
+  margin: auto;
+  margin-left: 27%;
+  margin-right: 40%;
+  width: 200px;
+  height: 46px;
+}
+.card{
+  margin-top: 30px;
+  margin-left: auto;
+  border: 3px solid rgb(194, 17, 194);
+  background-color: transparent;
+  height:fit-content;
+  box-shadow: -2px 3px 15px 9px rgba(139, 10, 96, 0.822);
+}
+.card-body{
+  border-top: 2px solid rgb(151, 10, 151);
+  padding: 7px 8px 7px 8px;
+}
+.face-img {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+.h2{
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5mm;;
+}
+.ver-br {
+  background-image: linear-gradient(
+    to top,
+    rgb(6, 6, 139),
+    white
+  );
+  height: 600px;
+  width: 2px;
+  border-radius: 10px;
+  margin: auto;
+  padding: 3.5px;
+  box-shadow: -2px 3px 15px 1px rgba(253, 253, 253, 0.822);
+}
+
+.groups{
+  border: 3px solid rgb(121, 220, 238);
+  border-radius: 6px;
+  width:fit-content;
+  height: fit-content;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 4px;
+  margin-bottom: 25px;
+  box-shadow: -2px 3px 17px 8px rgba(6, 124, 134, 0.8);
+}
+.page-footer{
+ color: rgb(247, 243, 243);
+ letter-spacing: 0.3mm;
+ font-size: 0.7rem; 
+ margin-top: 120px;
+ border: 2px solid white;
+ box-shadow: inset 2px 3px 18px 5px rgba(255, 255, 255, 0.622);
+}
+.footer-copyright a{
+  color: white;
+  font-size: large;
+}

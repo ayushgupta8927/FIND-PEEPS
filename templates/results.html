@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Face-Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page">
+        <div class="container" align='center'>
+            <span>
+                <h1 class="heading"><img class="icon" src="{{ url_for('static', filename='icon.png') }}" alt="" width=80
+                        height=80 style="margin-right:10px;" />Face
+                    Recognition</h1>
+            </span>
+            <hr>
+        </div>
+        
+        <div class="flex-container">
+            <div class="card" style="width: 300px">
+                <img class="res-img card-img-top" src="{{ url_for('static', filename=theImageSource) }}" width=300 height=300 />
+                <div class="card-body">
+                    <p class="card-text h2" align="center">Original Image</p>
+                </div>
+            </div>
+            <div class="ver-br">
+        
+            </div>
+        
+            <div class="groups">
+                <h3 align="center" class="h2">Faces Recognised</h3>
+                <div class="flex-container-col">
+                    {% for f in os.listdir(os.path.join(os.getcwd(), 'face_output')) %}
+                    <div class="face-img">
+                        <img src="{{ url_for('static', filename='face_output/'+f) }}" width=100 height=100 />
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="group-body">
+                    <button class='Download btn btn-info btn-large'><a href="/download-files" target="blank"
+                            style="text-decoration: none;color: white; font-weight: bold; letter-spacing: 0.3mm;">Download</a></button>
+                </div>
+            </div>
+        </div>
+        
+        </body>
+        <footer class="page-footer font-small teal pt-4">
+        
+            <!-- Footer Text -->
+            <div class="container-fluid text-center text-md-left">
+        
+                <!-- Grid row -->
+                <div class="row">
+        
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+        
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">A Flask Web-App for Face Detection </h5>
+                        <p>This Flask Web App functions as a fully-equipped Face-Detection software, with accurate Face and
+                            Feature Detection Mechanisms.
+                            The MTCNN Classifier has been utilised for the task of Face Detection. This has been paired with the
+                            capabilities of Python and Flask,
+                            inorder to achieve the highest possible efficiency and ease of use. The detected faces can be
+                            downloaded as a zip-file onto the client's device, for further reference and perusal.
+        
+                        </p>
+        
+                    </div>
+                    <!-- Grid column -->
+        
+                    <hr class="clearfix w-100 d-md-none pb-3">
+        
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-md-0 mb-3">
+        
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">Developer's Note:</h5>
+                        <p>This web App has been developed by Abhirup Deb and Ayush Gupta, 3rd Year Students of Computer Science and
+                            Engineering Department, Cooch Behar Government Engineering College.</p>
+        
+                    </div>
+                    <!-- Grid column -->
+        
+                </div>
+                <!-- Grid row -->
+        
+            </div>
+            <!-- Footer Text -->
+        
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2021 Copyright:
+                <a href="https://github.com/abhirupdeb/"> Abhirup_Deb</a>
+            </div>
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
+    </div>
+</body>
+</html>
+
